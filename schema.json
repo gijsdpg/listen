@@ -1,0 +1,947 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "publicationDate": {
+          "type": "string"
+        },
+        "structuredText": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rawText": {
+                "type": "string"
+              },
+              "textType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "rawText",
+              "textType"
+            ]
+          }
+        },
+        "firstPublicationDate": {
+          "type": "string"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "mainSection": {
+          "type": "string"
+        },
+        "publicationTimeStamp": {
+          "type": "integer"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "brandPublications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "firstPublicationDate": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "firstPublicationDate",
+              "name"
+            ]
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "articleType": {
+          "type": "string"
+        },
+        "schemaVersion": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "majorVersion": {
+          "type": "string"
+        },
+        "enrichments": {
+          "type": "object",
+          "properties": {
+            "brand_safety": {
+              "type": "object",
+              "properties": {
+                "is_brandsafe": {
+                  "type": "boolean"
+                },
+                "confidence": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "confidence",
+                "is_brandsafe"
+              ]
+            },
+            "locations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer"
+                  },
+                  "score": {
+                    "type": "number"
+                  },
+                  "country_code": {
+                    "type": "string"
+                  },
+                  "osm_id": {
+                    "type": "integer"
+                  },
+                  "place_rank": {
+                    "type": "integer"
+                  },
+                  "importance": {
+                    "type": "number"
+                  },
+                  "mentions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "source": {
+                          "type": "string"
+                        },
+                        "index": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source"
+                      ]
+                    }
+                  },
+                  "wikidata": {
+                    "type": "string"
+                  },
+                  "lonlat": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "count",
+                  "country_code",
+                  "importance",
+                  "lonlat",
+                  "mentions",
+                  "name",
+                  "osm_id",
+                  "place_rank",
+                  "score",
+                  "wikidata"
+                ]
+              }
+            },
+            "NSentences": {
+              "type": "integer"
+            },
+            "GensimDocumentEmbedding": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "CustomTopics": {
+              "type": "object",
+              "properties": {
+                "customer_intelligence": {
+                  "type": "object",
+                  "properties": {
+                    "mensen": {
+                      "type": "number"
+                    },
+                    "binnenland": {
+                      "type": "number"
+                    },
+                    "binnenlandse_politiek": {
+                      "type": "number"
+                    },
+                    "bouwen_en_wonen": {
+                      "type": "number"
+                    },
+                    "bv_nederland": {
+                      "type": "number"
+                    },
+                    "culinair": {
+                      "type": "number"
+                    },
+                    "defensie": {
+                      "type": "number"
+                    },
+                    "digitaal_en_technologie": {
+                      "type": "number"
+                    },
+                    "film_en_podiumkunst": {
+                      "type": "number"
+                    },
+                    "geloof_en_samenleving": {
+                      "type": "number"
+                    },
+                    "gezondheid": {
+                      "type": "number"
+                    },
+                    "herdenken": {
+                      "type": "number"
+                    },
+                    "hoger_onderwijs_en_emancipatie": {
+                      "type": "number"
+                    },
+                    "drama_en_emotie": {
+                      "type": "number"
+                    },
+                    "internationaal": {
+                      "type": "number"
+                    },
+                    "kunst": {
+                      "type": "number"
+                    },
+                    "consumeren_en_besteden": {
+                      "type": "number"
+                    },
+                    "literatuur": {
+                      "type": "number"
+                    },
+                    "muziek": {
+                      "type": "number"
+                    },
+                    "natuur_en_milieu": {
+                      "type": "number"
+                    },
+                    "onderwijs_en_opvoeding": {
+                      "type": "number"
+                    },
+                    "rampen_en_rechtshandhaving": {
+                      "type": "number"
+                    },
+                    "regionieuws": {
+                      "type": "number"
+                    },
+                    "restbak": {
+                      "type": "number"
+                    },
+                    "royalty": {
+                      "type": "number"
+                    },
+                    "sport_overig": {
+                      "type": "number"
+                    },
+                    "televisie": {
+                      "type": "number"
+                    },
+                    "transport": {
+                      "type": "number"
+                    },
+                    "voeding": {
+                      "type": "number"
+                    },
+                    "voetbal": {
+                      "type": "number"
+                    },
+                    "weer": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "binnenland",
+                    "binnenlandse_politiek",
+                    "bouwen_en_wonen",
+                    "bv_nederland",
+                    "consumeren_en_besteden",
+                    "culinair",
+                    "defensie",
+                    "digitaal_en_technologie",
+                    "drama_en_emotie",
+                    "film_en_podiumkunst",
+                    "geloof_en_samenleving",
+                    "gezondheid",
+                    "herdenken",
+                    "hoger_onderwijs_en_emancipatie",
+                    "internationaal",
+                    "kunst",
+                    "literatuur",
+                    "mensen",
+                    "muziek",
+                    "natuur_en_milieu",
+                    "onderwijs_en_opvoeding",
+                    "rampen_en_rechtshandhaving",
+                    "regionieuws",
+                    "restbak",
+                    "royalty",
+                    "sport_overig",
+                    "televisie",
+                    "transport",
+                    "voeding",
+                    "voetbal",
+                    "weer"
+                  ]
+                },
+                "customer_intelligence_v2": {
+                  "type": "object",
+                  "properties": {
+                    "eten_en_drinken": {
+                      "type": "number"
+                    },
+                    "gezondheid_en_zorg": {
+                      "type": "number"
+                    },
+                    "bouwen_en_wonen": {
+                      "type": "number"
+                    },
+                    "religie": {
+                      "type": "number"
+                    },
+                    "technologie_en_handel": {
+                      "type": "number"
+                    },
+                    "consumeren_en_vrije_tijd": {
+                      "type": "number"
+                    },
+                    "het_weer": {
+                      "type": "number"
+                    },
+                    "voetbal": {
+                      "type": "number"
+                    },
+                    "gemeentepolitiek": {
+                      "type": "number"
+                    },
+                    "overheidsbeleid": {
+                      "type": "number"
+                    },
+                    "brand": {
+                      "type": "number"
+                    },
+                    "natuur": {
+                      "type": "number"
+                    },
+                    "maatschappelijke_instellingen": {
+                      "type": "number"
+                    },
+                    "sport": {
+                      "type": "number"
+                    },
+                    "veiligheid": {
+                      "type": "number"
+                    },
+                    "recht_en_justitie": {
+                      "type": "number"
+                    },
+                    "lokale_evenementen": {
+                      "type": "number"
+                    },
+                    "onderwijs": {
+                      "type": "number"
+                    },
+                    "optredens_en_voorstellingen": {
+                      "type": "number"
+                    },
+                    "kunst_en_cultuur": {
+                      "type": "number"
+                    },
+                    "samenleving": {
+                      "type": "number"
+                    },
+                    "verkeersongevallen": {
+                      "type": "number"
+                    },
+                    "bestuur_en_organisatie": {
+                      "type": "number"
+                    },
+                    "verkeer": {
+                      "type": "number"
+                    },
+                    "afval_en_milieuproblematiek": {
+                      "type": "number"
+                    },
+                    "politiek": {
+                      "type": "number"
+                    },
+                    "wielrennen": {
+                      "type": "number"
+                    },
+                    "misdaad": {
+                      "type": "number"
+                    },
+                    "vakbond_club_en_vereniging": {
+                      "type": "number"
+                    },
+                    "relatie_en_opvoeden": {
+                      "type": "number"
+                    },
+                    "economie": {
+                      "type": "number"
+                    },
+                    "zingeving_en_verhalen": {
+                      "type": "number"
+                    },
+                    "nominatie_en_prijzen": {
+                      "type": "number"
+                    },
+                    "duurzaamheid": {
+                      "type": "number"
+                    },
+                    "woon_en_leefomgeving": {
+                      "type": "number"
+                    },
+                    "human_interest": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "afval_en_milieuproblematiek",
+                    "bestuur_en_organisatie",
+                    "bouwen_en_wonen",
+                    "brand",
+                    "consumeren_en_vrije_tijd",
+                    "duurzaamheid",
+                    "economie",
+                    "eten_en_drinken",
+                    "gemeentepolitiek",
+                    "gezondheid_en_zorg",
+                    "het_weer",
+                    "human_interest",
+                    "kunst_en_cultuur",
+                    "lokale_evenementen",
+                    "maatschappelijke_instellingen",
+                    "misdaad",
+                    "natuur",
+                    "nominatie_en_prijzen",
+                    "onderwijs",
+                    "optredens_en_voorstellingen",
+                    "overheidsbeleid",
+                    "politiek",
+                    "recht_en_justitie",
+                    "relatie_en_opvoeden",
+                    "religie",
+                    "samenleving",
+                    "sport",
+                    "technologie_en_handel",
+                    "vakbond_club_en_vereniging",
+                    "veiligheid",
+                    "verkeer",
+                    "verkeersongevallen",
+                    "voetbal",
+                    "wielrennen",
+                    "woon_en_leefomgeving",
+                    "zingeving_en_verhalen"
+                  ]
+                },
+                "lifestyle_topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "customer_intelligence",
+                "customer_intelligence_v2",
+                "lifestyle_topics"
+              ]
+            },
+            "raw_character_count": {
+              "type": "integer"
+            },
+            "NWords": {
+              "type": "integer"
+            },
+            "Sentiment": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "MinHash": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "Complexity": {
+              "type": "number"
+            },
+            "semantics": {
+              "type": "object",
+              "properties": {
+                "mediaTopicInquiryResults": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      },
+                      "mediaTopic": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name"
+                        ]
+                      },
+                      "score": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "enabled",
+                      "mediaTopic",
+                      "score"
+                    ]
+                  }
+                },
+                "wikiLinkInquiryResults": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "mentions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "end": {
+                              "type": "integer"
+                            },
+                            "begin": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "begin",
+                            "end"
+                          ]
+                        }
+                      },
+                      "wikiLink": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "title",
+                          "url"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "mentions",
+                      "wikiLink"
+                    ]
+                  }
+                },
+                "namedEntityInquiryResults": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "namedEntity": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string"
+                          },
+                          "wikiLink": {
+                            "type": "object",
+                            "properties": {
+                              "title": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "title",
+                              "url"
+                            ]
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "type"
+                        ]
+                      },
+                      "score": {
+                        "type": "number"
+                      },
+                      "saliency": {
+                        "type": "number"
+                      },
+                      "keyword": {
+                        "type": "boolean"
+                      },
+                      "confidence": {
+                        "type": "string"
+                      },
+                      "altNames": {
+                        "type": "array"
+                      },
+                      "wikiData": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "score": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "score"
+                        ]
+                      },
+                      "mentions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "end": {
+                              "type": "integer"
+                            },
+                            "begin": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "begin",
+                            "end"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "altNames",
+                      "confidence",
+                      "keyword",
+                      "mentions",
+                      "namedEntity",
+                      "saliency",
+                      "score"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "mediaTopicInquiryResults",
+                "namedEntityInquiryResults",
+                "wikiLinkInquiryResults"
+              ]
+            },
+            "Language": {
+              "type": "string"
+            },
+            "item_urls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "brand": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "brand",
+                  "url"
+                ]
+              }
+            },
+            "urgency": {
+              "type": "number"
+            },
+            "CleanText": {
+              "type": "string"
+            },
+            "creator_brand": {
+              "type": "string"
+            },
+            "subdesk": {
+              "type": "string"
+            },
+            "desk": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "CleanText",
+            "Complexity",
+            "CustomTopics",
+            "GensimDocumentEmbedding",
+            "Language",
+            "MinHash",
+            "NSentences",
+            "NWords",
+            "Sentiment",
+            "brand_safety",
+            "creator_brand",
+            "item_urls",
+            "locations",
+            "raw_character_count",
+            "semantics",
+            "urgency"
+          ]
+        },
+        "payWall": {
+          "type": "boolean"
+        },
+        "articleId": {
+          "type": "integer"
+        },
+        "author": {
+          "type": "string"
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "assetId": {
+                "type": "string"
+              },
+              "asset": {
+                "type": "object",
+                "properties": {
+                  "media_pools": {
+                    "type": "array"
+                  },
+                  "asset_entity_id": {
+                    "type": "string"
+                  },
+                  "crops": {
+                    "type": "array"
+                  },
+                  "caption": {
+                    "type": "object",
+                    "properties": {
+                      "html_text": {
+                        "type": "string"
+                      },
+                      "raw_text": {
+                        "type": "string"
+                      },
+                      "html_annotations": {
+                        "type": "array"
+                      },
+                      "raw_annotations": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "html_annotations",
+                      "html_text",
+                      "raw_annotations",
+                      "raw_text"
+                    ]
+                  },
+                  "photo_link": {
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "provider"
+                    ]
+                  },
+                  "asset_type": {
+                    "type": "string"
+                  },
+                  "xxl_crop": {
+                    "type": "boolean"
+                  },
+                  "credit": {
+                    "type": "string"
+                  },
+                  "author": {
+                    "type": "string"
+                  },
+                  "focus_point": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "number"
+                      },
+                      "y": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset_entity_id",
+                  "asset_type"
+                ]
+              }
+            },
+            "required": [
+              "asset",
+              "assetId"
+            ]
+          }
+        },
+        "sectionPath": {
+          "type": "string"
+        },
+        "imageUrlLarge": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "shortId": {
+          "type": "string"
+        },
+        "authorNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "minorVersion": {
+          "type": "string"
+        },
+        "brands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subLabel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "articleId",
+        "articleType",
+        "assets",
+        "author",
+        "authorNames",
+        "brand",
+        "brandPublications",
+        "brands",
+        "category",
+        "contentType",
+        "enrichments",
+        "firstPublicationDate",
+        "imageUrl",
+        "imageUrlLarge",
+        "mainSection",
+        "majorVersion",
+        "minorVersion",
+        "payWall",
+        "publicationDate",
+        "publicationTimeStamp",
+        "published",
+        "schemaVersion",
+        "sectionPath",
+        "shortId",
+        "structuredText",
+        "title",
+        "url"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "item.enrichments": {
+          "type": "object",
+          "properties": {
+            "timestamp": {
+              "type": "string"
+            },
+            "component": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "component",
+            "timestamp",
+            "version"
+          ]
+        }
+      },
+      "required": [
+        "item.enrichments"
+      ]
+    }
+  },
+  "required": [
+    "item",
+    "metadata"
+  ]
+}
